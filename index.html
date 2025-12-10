@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulang Tahun Sayangku ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Musik Background -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Kontrol Musik -->
+    <div class="music-control">
+        <button id="music-toggle" aria-label="Toggle music">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <!-- Halaman Pembuka -->
+    <div id="opening-screen" class="screen active">
+        <div class="container">
+            <div class="opening-content">
+                <div class="icon-wrapper animate-bounce">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h1 class="animate-fade-in-up">Kejutan Spesial</h1>
+                <p class="animate-fade-in-up delay-1">Ada sesuatu yang indah menantimu</p>
+                <button id="start-btn" class="btn-primary animate-pulse">
+                    Buka Kejutan <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeri Foto -->
+    <div id="gallery-screen" class="screen scrollable">
+        <div class="container">
+            <div class="section-header animate-fade-in">
+                <h2>Kenangan Kita</h2>
+                <p>Momen indah yang kita lalui bersama</p>
+            </div>
+            
+            <div class="photo-grid">
+                <div class="photo-card animate-slide-in-left">
+                    <div class="photo-wrapper">
+                        <img src="assets/images/foto1.jpg" alt="Kenangan 1" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="photo-info">
+                        <h3>Momen Pertama</h3>
+                        <p>Awal dari segalanya</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card animate-slide-in-up">
+                    <div class="photo-wrapper">
+                        <img src="assets/images/foto2.jpg" alt="Kenangan 2" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="photo-info">
+                        <h3>Tawa Bahagia</h3>
+                        <p>Kebahagiaan sederhana</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card animate-slide-in-right">
+                    <div class="photo-wrapper">
+                        <img src="assets/images/foto3.jpg" alt="Kenangan 3" loading="lazy">
+                        <div class="photo-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="photo-info">
+                        <h3>Perjalanan Cinta</h3>
+                        <p>Bersama dalam suka duka</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section animate-fade-in-up">
+                <h3>Video Kenangan</h3>
+                <div class="video-wrapper">
+                    <div class="video-play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <video controls poster="assets/images/video-poster.jpg">
+                        <source src="assets/video/kenangan.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <button id="message-btn" class="btn-primary animate-bounce-in">
+                Lihat Pesanku <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Pesan Ulang Tahun -->
+    <div id="message-screen" class="screen scrollable">
+        <div class="container">
+            <div class="message-card animate-scale-in">
+                <div class="message-header">
+                    <div class="decoration animate-rotate">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2 class="animate-fade-in-down">Selamat Ulang Tahun</h2>
+                    <div class="subtitle animate-fade-in-up delay-1">Untuk orang terkasih</div>
+                </div>
+                
+                <div class="message-body">
+                    <div class="message-text">
+                        <p class="typing-text" data-text="Hari ini adalah hari spesial, hari dimana seseorang yang sangat kusayang lahir ke dunia."></p>
+                        <p class="typing-text" data-text="Terima kasih sudah menjadi bagian terindah dalam hidupku. Setiap tawamu, setiap dukunganmu, dan setiap momen bersamamu adalah anugerah terbesar bagiku."></p>
+                        <p class="typing-text" data-text="Aku berharap semua impianmu terwujud, bahagia selalu menyertaimu, dan kita bisa terus menciptakan kenangan indah bersama."></p>
+                        <p class="typing-text" data-text="Aku sayang kamu lebih dari kata-kata. Selamat ulang tahun, cintaku!"></p>
+                    </div>
+                    
+                    <div class="message-footer">
+                        <div class="signature">
+                            <p>Dengan cinta,</p>
+                            <p class="name">Rifki Abdullah</p>
+                        </div>
+                        <div class="date">
+                            <i class="far fa-calendar"></i>
+                            <span id="current-date"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
